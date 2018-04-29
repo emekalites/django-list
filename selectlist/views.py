@@ -1,8 +1,7 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Drug
 
 
 def index(request):
-    return render(request, 'selectlist/index.html')
-
+    context = {'drugs': Drug.objects.all()}
+    return render(request, 'selectlist/index.html', context)
