@@ -1,0 +1,100 @@
+[
+  {
+    "model": "main.drug",
+    "pk": 1,
+    "fields": {
+      "name": "Paracetamol"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 2,
+    "fields": {
+      "name": "Cough Syrup"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 3,
+    "fields": {
+      "name": "Tetracycline"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 4,
+    "fields": {
+      "name": "Maloxine"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 5,
+    "fields": {
+      "name": "Septrin"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 6,
+    "fields": {
+      "name": "Penicillin"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 7,
+    "fields": {
+      "name": "Ampiclox"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 8,
+    "fields": {
+      "name": "Phensidyl"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 9,
+    "fields": {
+      "name": "Panadol"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 10,
+    "fields": {
+      "name": "Chloroquine"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 11,
+    "fields": {
+      "name": "Xantocin"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 12,
+    "fields": {
+      "name": "Amylophiline"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 13,
+    "fields": {
+      "name": "Gertran"
+    }
+  },
+  {
+    "model": "main.drug",
+    "pk": 14,
+    "fields": {
+      "name": "Entorpin"
+    }
+  }
+]
