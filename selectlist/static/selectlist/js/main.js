@@ -51,9 +51,11 @@ $(function () {
 
         var quantity = $("#current-stock-"+ id);
         var sub_total = parseFloat($('#subtotal').val()) - (parseFloat(amount) * quantity);
+        sub_total = isNaN(sub_total) ? 0 : sub_total;
         var discount = $('#discount').val();
 
         var total = sub_total - parseFloat(discount);
+        total = isNaN(total) ? 0 : total;
 
         $('#subtotal').val(sub_total);
         $('#grosstotal').val(total);
