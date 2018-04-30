@@ -4,5 +4,6 @@ staticfiles
 .env
 db.sqlite3
 .idea
-./static/admin
+static/admin
+static/selectlist
 .DS_Store
