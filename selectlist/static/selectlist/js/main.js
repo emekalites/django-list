@@ -49,6 +49,8 @@ $(function () {
 
         $("#select-list option[value='" + id + "']").attr("selected", false);
 
+        $("#d-list-"+id).remove();
+
         var sub_total = 0;
         $("input[name^=drug_quantity]").each(function () {
             var id = $(this).parent().parent().children("input[name^=drug_id]").val();
@@ -81,8 +83,6 @@ $(function () {
 
         $('#subtotal').val(sub_total);
         $('#grosstotal').val(grosstotal);
-
-        $("#d-list-"+id).remove();
     });
 
     $("#discount").on("keyup", function() {
