@@ -49,16 +49,38 @@ $(function () {
 
         $("#select-list option[value='" + id + "']").attr("selected", false);
 
-        var quantity = $("#current-stock-"+ id);
-        var sub_total = parseFloat($('#subtotal').val()) - (parseFloat(amount) * quantity);
-        sub_total = isNaN(sub_total) ? 0 : sub_total;
-        var discount = $('#discount').val();
+        var sub_total = 0;
+        $("input[name^=drug_quantity]").each(function () {
+            var id = $(this).parent().parent().children("input[name^=drug_id]").val();
 
-        var total = sub_total - parseFloat(discount);
-        total = isNaN(total) ? 0 : total;
+            var qty = $(this).val();
+            var quantity = 0;
+            var amount = 0;
+
+            if(qty === ""){
+                $("#remaining-stock-"+ id).text("0");
+            }
+            else {
+                quantity = parseInt(qty);
+                var stock = parseInt($("#d-drug-"+ id).data('stock'));
+
+                if(quantity <= stock && quantity >= 0){
+                    amount = parseFloat($("#d-drug-"+ id).data('amount'));
+                    $("#remaining-stock-"+ id).text(stock - parseInt(qty));
+                }
+                else {
+                    $("#remaining-stock-"+ id).text("0");
+                }
+            }
+
+            sub_total += amount * quantity;
+        });
+
+        var discount = parseFloat($('#discount').val());
+        var grosstotal = sub_total - discount;
 
         $('#subtotal').val(sub_total);
-        $('#grosstotal').val(total);
+        $('#grosstotal').val(grosstotal);
 
         $("#d-list-"+id).remove();
     });
