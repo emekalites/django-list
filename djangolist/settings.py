@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '^nc2i)(698-z1z^)k894_y6r2-gn_eei&jq$b4#j5i90*zvv_2'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -70,14 +68,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangolist.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddshvf9mb4di1u',
+        'USER': 'yvwbsrjbdjzzae',
+        'PASSWORD': 'a71c4b088e84431d6969e8d55952c0754bbaf2d4a58f6981c06cd1c28bb62326',
+        'HOST': 'ec2-54-225-96-191.compute-1.amazonaws.com',
+        'PORT'	: '5432',
     }
 }
 
